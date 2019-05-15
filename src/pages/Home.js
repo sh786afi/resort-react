@@ -4,6 +4,7 @@ import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import Services from "../component/Services";
 import FeaturedRooms from "../component/FeaturedRooms";
+
 const Home = () => {
   return (
     <React.Fragment>

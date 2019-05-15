@@ -141,7 +141,7 @@ export default [
       price: 250,
       size: 300,
       capacity: 1,
-      pets: true,
+      pets: false,
       breakfast: false,
       featured: false,
       description:
@@ -711,7 +711,7 @@ export default [
       price: 600,
       size: 1000,
       capacity: 10,
-      pets: true,
+      pets: false,
       breakfast: true,
       featured: true,
       description:
