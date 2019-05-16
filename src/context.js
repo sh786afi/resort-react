@@ -4,7 +4,7 @@ const RoomContext = React.createContext();
 class RoomProvider extends Component {
   state = {
     rooms: [],
-    storedRooms: [],
+    sortedRooms: [],
     featuredRooms: [],
     loading: true
   };
@@ -14,7 +14,7 @@ class RoomProvider extends Component {
     this.setState({
       rooms,
       featuredRooms,
-      storedRooms: rooms,
+      sortedRooms: rooms,
       loading: false
     });
   }
@@ -42,4 +42,15 @@ class RoomProvider extends Component {
   }
 }
 const RoomConsumer = RoomContext.Consumer;
+
+export function withRoomConsumer(Component) {
+  return function(props) {
+    return (
+      <RoomConsumer>
+        {value => <Component {...props} context={value} />}
+      </RoomConsumer>
+    );
+  };
+}
+
 export { RoomProvider, RoomConsumer, RoomContext };
